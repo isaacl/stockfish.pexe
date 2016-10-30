@@ -238,6 +238,7 @@ void UCI::command(string cmd) {
       else if (token == "go")         go(pos, is);
       else if (token == "position")   position(pos, is);
       else if (token == "setoption")  setoption(is);
+      else if (token == "bench")      benchmark(pos, is);
       else
           sync_cout << "Unknown command: " << cmd << sync_endl;
 }
