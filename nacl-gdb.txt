@@ -1,0 +1,9 @@
+target remote localhost:4014
+remote get nexe /tmp/t.nexe
+file /tmp/t.nexe
+remote get irt /tmp/t.irt
+nacl-irt /tmp/t.irt
+
+set history save on
+set history filename ~/.gdb_history
+dir ~/code/stockfish.pexe/nacl

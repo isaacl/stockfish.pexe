@@ -3,7 +3,11 @@ function on_load() {
   console.log('load');
 
   window.Stockfish = document.getElementById('stockfish');
-  window.Stockfish.postMessage('uci');
+  window.Stockfish.postMessage('setoption name Threads value 5');
+  window.Stockfish.postMessage('setoption name Hash value 512');
+  window.Stockfish.postMessage('setoption name MultiPV value 3');
+  window.Stockfish.postMessage('position fen R7/P5k1/7p/8/8/6PP/r7/4K3 w - - 0 1 moves');
+  window.Stockfish.postMessage('go depth 99');
 }
 
 function on_message(e) {
