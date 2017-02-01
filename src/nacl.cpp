@@ -58,14 +58,14 @@ protected:
 class StockfishInstance : public pp::Instance {
 public:
   explicit StockfishInstance(PP_Instance instance) : pp::Instance(instance), captureBuf(this) {
-    origBuf = std::cout.rdbuf(&captureBuf);
-    origBufErr = std::cerr.rdbuf(&captureBuf);
+    // origBuf = std::cout.rdbuf(&captureBuf);
+    // origBufErr = std::cerr.rdbuf(&captureBuf);
     initialize();
   }
 
   virtual ~StockfishInstance() {
-    std::cout.rdbuf(origBuf);
-    std::cerr.rdbuf(origBufErr);
+    // std::cout.rdbuf(origBuf);
+    // std::cerr.rdbuf(origBufErr);
   }
 
   virtual void HandleMessage(const pp::Var& var_message) {

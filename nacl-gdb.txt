@@ -4,6 +4,14 @@ file /tmp/t.nexe
 remote get irt /tmp/t.irt
 nacl-irt /tmp/t.irt
 
+define hook-quit
+    set confirm off
+end
+layout src
+winheight src -10
+layout regs
+winheight regs -3
+
 set history save on
 set history filename ~/.gdb_history
 dir ~/code/stockfish.pexe/nacl

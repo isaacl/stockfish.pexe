@@ -1100,7 +1100,11 @@ moves_loop: // When in check search starts from here
       }
 
       // Speculative prefetch as early as possible
+
+#ifndef NO_PREFETCH
       prefetch(TT.first_entry(pos.key_after(move)));
+#endif
+
 
       // Check for legality just before making the move
       if (!rootNode && !pos.legal(move))
@@ -1480,7 +1484,9 @@ moves_loop: // When in check search starts from here
           continue;
 
       // Speculative prefetch as early as possible
-      prefetch(TT.first_entry(pos.key_after(move)));
+#ifndef NO_PREFETCH
+        prefetch(TT.first_entry(pos.key_after(move)));
+#endif
 
       // Check for legality just before making the move
       if (!pos.legal(move))

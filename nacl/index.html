@@ -3,9 +3,9 @@ function on_load() {
   console.log('load');
 
   window.Stockfish = document.getElementById('stockfish');
-  window.Stockfish.postMessage('setoption name Threads value 7');
-  window.Stockfish.postMessage('setoption name Hash value 512');
-  window.Stockfish.postMessage('setoption name MultiPV value 2');
+  window.Stockfish.postMessage('setoption name Threads value 1');
+  window.Stockfish.postMessage('setoption name Hash value 128');
+  window.Stockfish.postMessage('setoption name MultiPV value 3');
   window.Stockfish.postMessage('position fen 8/8/1p3pk1/2b2RPp/4Pq1K/2Q3PP/p7/8 w - - 2 42');
   window.Stockfish.postMessage('go depth 99');
 }

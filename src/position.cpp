@@ -1632,7 +1632,10 @@ void Position::do_null_move(StateInfo& newSt) {
   }
 
   st->key ^= Zobrist::side;
+
+#ifndef NO_PREFETCH 
   prefetch(TT.first_entry(st->key));
+#endif
 
   ++st->rule50;
   st->pliesFromNull = 0;
