@@ -7,3 +7,4 @@ nacl-irt /tmp/t.irt
 set history save on
 set history filename ~/.gdb_history
 dir ~/code/stockfish.pexe/nacl
+cont

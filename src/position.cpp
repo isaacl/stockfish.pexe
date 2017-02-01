@@ -23,6 +23,7 @@
 #include <cstddef> // For offsetof()
 #include <cstring> // For std::memset, std::memcmp
 #include <iomanip>
+#include <iostream>
 #include <sstream>
 
 #include "bitboard.h"
@@ -1899,6 +1900,7 @@ bool Position::is_draw(int ply) const {
 
   for (int i = 4; i <= end; i += 2)
   {
+      // std::cout << "is_draw ply " << ply << " i " << i << "\n";
       stp = stp->previous->previous;
 
       // At root position ply is 1, so return a draw score if a position
