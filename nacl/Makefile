@@ -10,7 +10,7 @@ PNACL_FINALIZE = $(PNACL_TC_PATH)/bin/pnacl-finalize
 
 CXXFLAGS = -O0 -g -std=gnu++11 -fno-exceptions -fno-rtti \
 	-I$(NACL_SDK_ROOT)/include \
-	-mllvm -inline-threshold=500 \
+	-mllvm -inline-threshold=0 -fno-inline-functions \
 	-DIS_64BIT -DUSE_POPCNT -DNO_PREFETCH 
 #	-DANTI -DATOMIC -DCRAZYHOUSE -DHORDE -DKOTH -DRACE -DTHREECHECK \
 	-DUSELONGESTPV
